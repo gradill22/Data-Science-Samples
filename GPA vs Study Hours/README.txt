@@ -1,1 +1,4 @@
-This is a data visualiztion project you can find here: https://www.kaggle.com/code/gradydillon/gpa-vs-study-hours
+This is a data visualization project you can find here: https://www.kaggle.com/code/gradydillon/gpa-vs-study-hours
+
+gpa_study_hours.csv -> Data collected from 2012 with a dataset size of 193 students. All independently and anonymously recorded how many hours per week they study and what their GPA's are
+gpa_vs_study_hours.py -> My art :)
