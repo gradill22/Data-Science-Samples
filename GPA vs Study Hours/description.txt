@@ -1,0 +1,5 @@
+This is a data visualization project you can find here: https://www.kaggle.com/code/gradydillon/gpa-vs-study-hours
+
+The data comes from a study in 2012 that surveyed 193 anonymous undergraduate students. Each student recorded their own GPA and the number of hours per week they study.
+The data was collected at a private university in the United States in an introductory statistics course. It is stored in a CSV format in "gpa_study_hours.csv".
+In the data set, the "gpa" column stores each student's recorded GPA. The "study_hours" column stores each student's recorded number of hours per week of studying they do.
