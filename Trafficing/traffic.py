@@ -26,19 +26,25 @@ if __name__ == '__main__':
     females = df[df['gender'] == 'Female']
     females.loc[:, 'ageInt'] = [age_map[age] for age in females['ageBroad']]
 
+    r_width = 0.8
+    ticks = list(range(0, len(age_map)))
+    labels = age_map.keys()
+    rotation = 45
+    y_ticks = list(range(0, 10_001, 2_000))
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
 
-    ax1.hist(males['ageInt'], color='blue', rwidth=0.8)
+    ax1.hist(males['ageInt'], color='blue', rwidth=r_width)
     ax1.set_title('Age Distribution of Trafficked Males')
-    ax1.set_xticks(ticks=list(range(0, len(age_map))), labels=age_map.keys(), rotation=45)
+    ax1.set_xticks(ticks=ticks, labels=labels, rotation=rotation)
     ax1.set_yticks(list(range(0, 10_001, 2_000)))
     ax1.set_xlabel('Age Group')
     ax1.set_ylabel('Number of Trafficked Males')
 
-    ax2.hist(females['ageInt'], color='pink', rwidth=0.8)
+    ax2.hist(females['ageInt'], color='pink', rwidth=r_width)
     ax2.set_title('Age Distribution of Trafficked Females')
-    ax2.set_xticks(ticks=list(range(0, len(age_map))), labels=age_map.keys(), rotation=45)
-    ax2.set_yticks(list(range(0, 10_001, 2_000)))
+    ax2.set_xticks(ticks=ticks, labels=labels, rotation=rotation)
+    ax2.set_yticks(y_ticks)
     ax2.set_xlabel('Age Group')
     ax2.set_ylabel('Number of Trafficked Females')
 

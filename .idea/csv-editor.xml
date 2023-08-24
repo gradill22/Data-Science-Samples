@@ -3,21 +3,21 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Users\grady\Desktop\GPA vs Study Hours\gpa_study_hours.csv">
+        <entry key="\GPA vs Study Hours\gpa_study_hours.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="C:\Users\grady\Desktop\ML Education\melb_data.csv">
+        <entry key="\ML Education\melb_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="C:\Users\grady\Desktop\ML Education\train.csv">
+        <entry key="\ML Education\train.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
