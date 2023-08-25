@@ -1,11 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import os
 
 if __name__ == '__main__':
     df = pd.read_csv('the_global_k_anon_dataset.csv', delimiter=';', low_memory=False)
     df.drop('A', axis=1, inplace=True)
-    df.dropna(axis=0, subset=['ageBroad', 'gender'], inplace=True)
+    df.dropna(axis=0, subset=['yearOfRegistration', 'ageBroad', 'gender'], inplace=True)
 
     age_map = {
         '0--8': 0,
@@ -22,9 +22,7 @@ if __name__ == '__main__':
     df['ageInt'] = [age_map[age] for age in df.loc[:, 'ageBroad']]
 
     males = df[df['gender'] == 'Male']
-    males.loc[:, 'ageInt'] = [age_map[age] for age in males['ageBroad']]
     females = df[df['gender'] == 'Female']
-    females.loc[:, 'ageInt'] = [age_map[age] for age in females['ageBroad']]
 
     r_width = 0.8
     ticks = list(range(0, len(age_map)))
@@ -48,6 +46,10 @@ if __name__ == '__main__':
     ax2.set_xlabel('Age Group')
     ax2.set_ylabel('Number of Trafficked Females')
 
+    fig_name = "age_distribution_of_traffic.png"
+
     plt.tight_layout()
-    plt.show()
+    plt.savefig(fig_name, dpi=200)
     plt.close()
+
+    os.startfile(fig_name)
